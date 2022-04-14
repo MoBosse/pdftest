@@ -2,6 +2,7 @@
   <html>
     <head>
       <title>jsPDF example</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
      
       
     </head>
@@ -9,6 +10,15 @@
     <body bgcolor="FFFFFF">
 
       <h1>Test for jsPDF</h1>
+      <script>
+        import { jsPDF } from "jspdf";
+
+        // Default export is a4 paper, portrait, using millimeters for units
+        const doc = new jsPDF();
+
+        doc.text("Hello world!", 10, 10);
+        doc.save("a4.pdf");
+      </script>
  
 
     
